@@ -1,0 +1,7 @@
+com.hishiel.test.controller:Spring MVC控制器包
+com.hishiel.test.dao:数据访问层包，Mybatis映射文件对应的Dao接口存放在这个保重
+com.hishiel.test.entity:数据实体类包
+com.hishiel.test.service: 服务层包，服务层接口定义存放在这个包中
+com.hishiel.test.service.impl:服务层实现包，服务层接口实现代码存放在这个包中
+com.hishiel.test.security:项目安全包，用户认证、授权、许可等Shiro相关代码
+com.hishiel.test.mapping:Mybatis映射文件存在此包中

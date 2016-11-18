@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Java接口全限定名">
+	<sql id="selectColumns">FIELD LIST</sql>
+
+	<sql id="insertColumns">FIELD LIST</sql>
+
+	<select id="getById" parameterType="int" resultType="">
+		SELECT
+		<include refid="selectColumns" />
+		FROM TABLENAME WHERE KEY_FIELD =#{id}
+	</select>
+
+	<select id="getAll" resultType="">
+		SELECT
+		<include refid="selectColumns" />
+		FROM TABLENAME ORDER BY KEY_FIELD
+	</select>
+
+	<!-- 插入数据并返回主键值，注意，这里的KeyProperty应该是Java类里的属性名称，而非数据表中的字段名 -->
+	<insert id="insert" parameterType="" useGeneratedKeys="true" keyProperty="">
+		INSERT INTO
+		TABLENAME(
+		<include refid="insertColumns" />
+		)
+		VALUES(
+
+		)
+	</insert>
+	
+	<!-- 批量新增 -->
+	<insert id="batchInsert" parameterType="java.util.List">
+		INSERT INTO
+		TABLENAME(
+		<include refid="insertColumns" />
+		)
+		VALUES
+		<foreach collection="list" item="c" separator=",">
+		()
+		</foreach>
+	</insert>
+	
+	<!-- 更新数据 -->
+	<update id="update" parameterType="">
+		UPDATE TABLENAME
+		<set>
+		</set>
+		WHERE KEY_FIELD = #{}
+	</update>
+	
+	<!-- 根据传入的id值，删除单条记录 -->
+	<delete id="delete" parameterType="int">
+		DELETE FROM TABLENAME WHERE KEY_FIELD = #{id}
+	</delete>
+	
+	<!-- 根据传入的Id值列表，删除多条记录 -->
+	<delete id="batchDelete" parameterType="java.util.List">
+		DELETE FROM TABLENAME WHERE KEY_FIELD in
+		<foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+			#{item}
+		</foreach>
+	</delete>
+</mapper>

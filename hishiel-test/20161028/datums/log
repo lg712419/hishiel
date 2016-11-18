@@ -1,0 +1,19 @@
+Shiro系列之Shiro+Spring MVC整合
+
+1.pom.xml 编写
+
+2.web.xml 编写
+2.1.serlvet
+2.2.shiroFilter
+2.3.	...
+
+3.application-context.xml 编写
+3.1.dataSource 配置
+3.2.shiroFilter 配置
+3.3.mybatis 配置 @待编写
+
+4.数据库编写 @待编写
+ 
+5.后台编写 @待编写
+
+6.前端编写 @待编写

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<properties>
+		<property name="dialectClass" value="com.hishiel.quick4j.base.orm.dialect.MySql5Dialect" />
+	</properties>
+
+	<!-- <typeAliases> -->
+	<!-- <package name="com.hishiel.quick4j.web.model" /> -->
+	<!-- <package name="com.hishiel.quick4j.web.enums" /> -->
+	<!-- </typeAliases> -->
+
+	<!-- <plugins> -->
+	<!-- <plugin -->
+	<!-- interceptor="com.hishiel.quick4j.core.feature.orm.mybatis.PaginationResultSetHandlerInterceptor" /> -->
+	<!-- <plugin -->
+	<!-- interceptor="com.hishiel.quick4j.core.feature.orm.mybatis.PaginationStatementHandlerInterceptor" /> -->
+	<!-- </plugins> -->
+
+</configuration>
